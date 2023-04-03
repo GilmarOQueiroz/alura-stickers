@@ -5,11 +5,14 @@ import java.util.List;
 public class App {
     public static void main(String[] args) throws Exception {
         
-        String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2023-03-28&end_date=2023-03-29";
-        ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
+        //String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2023-03-28&end_date=2023-03-29";
+        //ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
         
         //String url = "https://mocki.io/v1/9a7c1ca9-29b4-4eb3-8306-1adb9d159060";
         //ExtratorDeConteudo extrator = new ExtratorDeConteudoDoIMDB();
+
+        String url = "http://localhost:8080/liguagens";
+        ExtratorDeConteudo extrator = new ExtratorDeConteudoDoIMDB();
 
         var http = new ClienteHttp();
         String json = http.buscaDados(url);

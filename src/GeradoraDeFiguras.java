@@ -27,11 +27,11 @@ public class GeradoraDeFiguras {
         Graphics2D graphics = (Graphics2D) novaImagem.getGraphics();
         graphics.drawImage(imagemOriginal, 0, 0, null);
 
-        var fonte = new Font(Font.SANS_SERIF, Font.BOLD, 70);
+        var fonte = new Font(Font.SANS_SERIF, Font.BOLD, 50);
         graphics.setColor(Color.RED);
         graphics.setFont(fonte);
 
-        graphics.drawString("O MELHOR FILME", 30, novaAltura - 100);
+        graphics.drawString("MELHOR", 20, novaAltura - 100);
 
         ImageIO.write(novaImagem, "png", new File(nomeArquivo));
 
